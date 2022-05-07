@@ -18,6 +18,7 @@ public class BeatScroller : MonoBehaviour
 
     public void Update()
     {
+        
         if(!hasStarted)
         {
             if(Input.anyKeyDown)
@@ -30,5 +31,12 @@ public class BeatScroller : MonoBehaviour
         {
             transform.position -= new Vector3(0f, beatTempo * Time.deltaTime, 0f);
         }
+
+        if(transform.position.y < -35)
+        {
+            Debug.Log("loopnow");
+            transform.position = new Vector3(-0.4072742f, 6f);
+        }
+      
     }
 }

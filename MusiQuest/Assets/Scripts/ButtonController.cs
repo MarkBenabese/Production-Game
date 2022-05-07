@@ -21,6 +21,7 @@ public class ButtonController : MonoBehaviour
         if(Input.GetKeyDown(keyToPress))
         {
             theSR.sprite = pressedImage;
+            
         }
 
         if(Input.GetKeyUp(keyToPress))
